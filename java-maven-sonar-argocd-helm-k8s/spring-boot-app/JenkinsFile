@@ -9,7 +9,7 @@ pipeline {
     stage('Checkout') {
       steps {
         sh 'echo passed'
-        //git branch: 'main', url: 'https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero.git'
+        //git branch: 'main', url: 'https://github.com/vignesh020919997/Jenkins-Zero-To-Hero.git'
       }
     }
     stage('Build and Test') {
@@ -48,7 +48,7 @@ pipeline {
     stage('Update Deployment File') {
         environment {
             GIT_REPO_NAME = "Jenkins-Zero-To-Hero"
-            GIT_USER_NAME = "iam-veeramalla"
+            GIT_USER_NAME = "vignesh020919997"
         }
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
